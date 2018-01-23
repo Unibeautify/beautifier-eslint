@@ -13,7 +13,7 @@ export const beautifier: Beautifier = {
         ["break_chained_methods"],
         function(options) {
           if (options.break_chained_methods === true) {
-            return 2;
+            return [2, {"ignoreChainWithDepth": 2 }]
           } else {
             return 2;
           }
@@ -36,7 +36,7 @@ export const beautifier: Beautifier = {
       else {
         return resolve(data.text);
       }
-    }) as any;
+    });
   }
 };
 
