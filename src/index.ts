@@ -140,8 +140,9 @@ export const beautifier: Beautifier = {
         }
       ],
       "brace-style": [
-        [""],
+        ["brace_style"],
         function(options) {
+
         }
       ],
       "capitalized-comments": [
@@ -155,8 +156,14 @@ export const beautifier: Beautifier = {
         }
       ],
       "comma-spacing": [
-        [""],
+        ["end_with_comma"],
         function(options) {
+          if (options.end_with_comma === true) {
+            return "always";
+          }
+          else {
+            return "never";
+          }
         }
       ],
       "comma-style": [
@@ -190,8 +197,11 @@ export const beautifier: Beautifier = {
         }
       ],
       "indent": [
-        [""],
+        ["force_indentation"],
         function(options) {
+          if (options.force_indentation === true) {
+
+          }
         }
       ],
       "jsx-quotes": [
@@ -240,7 +250,7 @@ export const beautifier: Beautifier = {
           if (options.break_chained_methods === true) {
             return [2, {"ignoreChainWithDepth": 2 }]
           } else {
-            return 2;
+            return 0;
           }
         }
       ],
@@ -255,8 +265,13 @@ export const beautifier: Beautifier = {
         }
       ],
       "no-trailing-spaces": [
-        [""],
+        ["remove_trailing_whitespace"],
         function(options) {
+          if (options.remove_trailing_whitespace === true) {
+            return [2, {"skipBlankLines": true, "ignoreComments": true}]
+          } else {
+            return 0;
+          }
         }
       ],
       "no-unneeded-ternary": [
@@ -280,8 +295,13 @@ export const beautifier: Beautifier = {
         }
       ],
       "object-curly-spacing": [
-        [""],
+        ["object_curly_spacing"],
         function(options) {
+          if (options.object_curly_spacing === true) {
+            return "always";
+          } else {
+            return "never";
+          }
         }
       ],
       "object-property-newline": [
@@ -320,13 +340,23 @@ export const beautifier: Beautifier = {
         }
       ],
       "quotes": [
-        [""],
+        ["convert_quotes"],
         function(options) {
+          if (options.convert_quotes === "none") {
+            return undefined;
+          } else {
+            return options.convert_quotes;
+          }
         }
       ],
       "semi": [
-        [""],
+        ["end_with_semicolon"],
         function(options) {
+          if (options.end_with_semicolon === true) {
+            return "always";
+          } else {
+            return "never";
+          }
         }
       ],
       "semi-spacing": [
@@ -399,11 +429,7 @@ export const beautifier: Beautifier = {
         function(options) {
         }
       ],
-      "arrow-parens": [
-        [""],
-        function(options) {
-        }
-      ],
+      "arrow-parens": "arrow_parens",
       "arrow-spacing": [
         [""],
         function(options) {
