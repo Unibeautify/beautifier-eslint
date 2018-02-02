@@ -11,153 +11,153 @@ export const beautifier: Beautifier = {
     _: {
       // "no-extra-boolean-cast": [
       //   [""],
-      //   function(options) {
+      //   (options): any => {
       //   }
       // ],
       // "no-extra-parens": [
       //   [""],
-      //   function(options) {
+      //   (options): any => {
       //   }
       // ],
       // "no-extra-semi": [
       //   [""],
-      //   function(options) {
+      //   (options): any => {
       //   }
       // ],
       // "no-regex-spaces": [
       //   [""],
-      //   function(options) {
+      //   (options): any => {
       //   }
       // ],
       // "no-unsafe-negation": [
       //   [""],
-      //   function(options) {
+      //   (options): any => {
       //   }
       // ],
       // "valid-jsdoc": [
       //   [""],
-      //   function(options) {
+      //   (options): any => {
       //   }
       // ],
       // "curly": [
       //   [""],
-      //   function(options) {
+      //   (options): any => {
       //   }
       // ],
       // "dot-location": [
       //   [""],
-      //   function(options) {
+      //   (options): any => {
       //   }
       // ],
       // "dot-notation": [
       //   [""],
-      //   function(options) {
+      //   (options): any => {
       //   }
       // ],
       // "eqeqeq": [
       //   [""],
-      //   function(options) {
+      //   (options): any => {
       //   }
       // ],
       // "no-else-return": [
       //   [""],
-      //   function(options) {
+      //   (options): any => {
       //   }
       // ],
       // "no-extra-bind": [
       //   [""],
-      //   function(options) {
+      //   (options): any => {
       //   }
       // ],
       // "no-extra-label": [
       //   [""],
-      //   function(options) {
+      //   (options): any => {
       //   }
       // ],
       // "no-floating-decimal": [
       //   [""],
-      //   function(options) {
+      //   (options): any => {
       //   }
       // ],
       // "no-implicit-coercion": [
       //   [""],
-      //   function(options) {
+      //   (options): any => {
       //   }
       // ],
       // "no-multi-spaces": [
       //   [""],
-      //   function(options) {
+      //   (options): any => {
       //   }
       // ],
       // "no-unused-labels": [
       //   [""],
-      //   function(options) {
+      //   (options): any => {
       //   }
       // ],
       // "no-useless-return": [
       //   [""],
-      //   function(options) {
+      //   (options): any => {
       //   }
       // ],
       // "wrap-iife": [
       //   [""],
-      //   function(options) {
+      //   (options): any => {
       //   }
       // ],
       // "yoda": [
       //   [""],
-      //   function(options) {
+      //   (options): any => {
       //   }
       // ],
       // "strict": [
       //   [""],
-      //   function(options) {
+      //   (options): any => {
       //   }
       // ],
       // "no-undef-init": [
       //   [""],
-      //   function(options) {
+      //   (options): any => {
       //   }
       // ],
       // "array-bracket-newline": [
       //   [""],
-      //   function(options) {
+      //   (options): any => {
       //   }
       // ],
       // "array-bracket-spacing": [
       //   [""],
-      //   function(options) {
+      //   (options): any => {
       //   }
       // ],
       // "array-element-newline": [
       //   [""],
-      //   function(options) {
+      //   (options): any => {
       //   }
       // ],
       // "block-spacing": [
       //   [""],
-      //   function(options) {
+      //   (options): any => {
       //   }
       // ],
       // "brace-style": [
       //   ["brace_style"],
-      //   function(options) {
+      //   (options): any => {
       //
       //   }
       // ],
       // "capitalized-comments": [
       //   [""],
-      //   function(options) {
+      //   (options): any => {
       //   }
       // ],
       // "comma-dangle": [
       //   [""],
-      //   function(options) {
+      //   (options): any => {
       //   }
       // ],
       "comma-dangle": [
         ["end_with_comma"],
-        function(options) {
+        (options): any => {
           if (options.end_with_comma === true) {
             return [2, "always"]
           }
@@ -169,37 +169,37 @@ export const beautifier: Beautifier = {
       ],
       // "comma-style": [
       //   [""],
-      //   function(options) {
+      //   (options): any => {
       //   }
       // ],
       // "computed-property-spacing": [
       //   [""],
-      //   function(options) {
+      //   (options): any => {
       //   }
       // ],
       // "eol-last": [
       //   [""],
-      //   function(options) {
+      //   (options): any => {
       //   }
       // ],
       // "func-call-spacing": [
       //   [""],
-      //   function(options) {
+      //   (options): any => {
       //   }
       // ],
       // "function-paren-newline": [
       //   [""],
-      //   function(options) {
+      //   (options): any => {
       //   }
       // ],
       // "implicit-arrow-linebreak": [
       //   [""],
-      //   function(options) {
+      //   (options): any => {
       //   }
       // ],
       // "indent": [
       //   ["force_indentation"],
-      //   function(options) {
+      //   (options): any => {
       //     if (options.force_indentation === true) {
       //
       //     }
@@ -207,47 +207,47 @@ export const beautifier: Beautifier = {
       // ],
       // "jsx-quotes": [
       //   [""],
-      //   function(options) {
+      //   (options): any => {
       //   }
       // ],
       // "key-spacing": [
       //   [""],
-      //   function(options) {
+      //   (options): any => {
       //   }
       // ],
       // "keyword-spacing": [
       //   [""],
-      //   function(options) {
+      //   (options): any => {
       //   }
       // ],
       // "linebreak-style": [
       //   [""],
-      //   function(options) {
+      //   (options): any => {
       //   }
       // ],
       // "lines-around-comment": [
       //   [""],
-      //   function(options) {
+      //   (options): any => {
       //   }
       // ],
       // "lines-between-class-members": [
       //   [""],
-      //   function(options) {
+      //   (options): any => {
       //   }
       // ],
       // "multiline-comment-style": [
       //   [""],
-      //   function(options) {
+      //   (options): any => {
       //   }
       // ],
       // "new-parens": [
       //   [""],
-      //   function(options) {
+      //   (options): any => {
       //   }
       // ],
       "newline-per-chained-call": [
         ["break_chained_methods"],
-        function(options) {
+        (options): any => {
           if (options.break_chained_methods === true) {
             return [2, {"ignoreChainWithDepth": 2 }]
           }
@@ -256,17 +256,17 @@ export const beautifier: Beautifier = {
       ],
       // "no-lonely-if": [
       //   [""],
-      //   function(options) {
+      //   (options): any => {
       //   }
       // ],
       // "no-multiple-empty-lines": [
       //   [""],
-      //   function(options) {
+      //   (options): any => {
       //   }
       // ],
       "no-trailing-spaces": [
         ["remove_trailing_whitespace"],
-        function(options) {
+        (options): any => {
           if (options.remove_trailing_whitespace === true) {
             return [2, {"skipBlankLines": true, "ignoreComments": true}]
           } else if (options.remove_trailing_whitespace === false) {
@@ -277,27 +277,27 @@ export const beautifier: Beautifier = {
       ],
       // "no-unneeded-ternary": [
       //   [""],
-      //   function(options) {
+      //   (options): any => {
       //   }
       // ],
       // "no-whitespace-before-property": [
       //   [""],
-      //   function(options) {
+      //   (options): any => {
       //   }
       // ],
       // "nonblock-statement-body-position": [
       //   [""],
-      //   function(options) {
+      //   (options): any => {
       //   }
       // ],
       // "object-curly-newline": [
       //   [""],
-      //   function(options) {
+      //   (options): any => {
       //   }
       // ],
       "object-curly-spacing": [
         ["object_curly_spacing"],
-        function(options) {
+        (options): any => {
           if (options.object_curly_spacing === true) {
             return [2, "always"]
           } else if (options.object_curly_spacing === false) {
@@ -308,55 +308,55 @@ export const beautifier: Beautifier = {
       ],
       // "object-property-newline": [
       //   [""],
-      //   function(options) {
+      //   (options): any => {
       //   }
       // ],
       // "one-var-declaration-per-line": [
       //   [""],
-      //   function(options) {
+      //   (options): any => {
       //   }
       // ],
       // "operator-assignment": [
       //   [""],
-      //   function(options) {
+      //   (options): any => {
       //   }
       // ],
       // "operator-linebreak": [
       //   [""],
-      //   function(options) {
+      //   (options): any => {
       //   }
       // ],
       // "padded-blocks": [
       //   [""],
-      //   function(options) {
+      //   (options): any => {
       //   }
       // ],
       // "padding-line-between-statements": [
       //   [""],
-      //   function(options) {
+      //   (options): any => {
       //   }
       // ],
       // "quote-props": [
       //   [""],
-      //   function(options) {
+      //   (options): any => {
       //   }
       // ],
       "quotes": [
-        ["convert_quotes"],
-        function(options) {
-          if (options.convert_quotes === "none") {
+        ["quotes"],
+        (options): any => {
+          if (!options.quotes || options.quotes === "none") {
             return 0;
           } else {
-            return [2, options.convert_quotes]
+            return [2, options.quotes]
           }
         }
       ],
       "semi": [
         ["end_with_semicolon"],
-        function(options) {
+        (options): any => {
           if (options.end_with_semicolon === true) {
             return [2, "always"]
-          } else if (options.end_with_semicolon === true) {
+          } else if (options.end_with_semicolon === false) {
             return [2, "never"]
           }
           return 0;
@@ -364,78 +364,78 @@ export const beautifier: Beautifier = {
       ],
       // "semi-spacing": [
       //   [""],
-      //   function(options) {
+      //   (options): any => {
       //   }
       // ],
       // "semi-style": [
       //   [""],
-      //   function(options) {
+      //   (options): any => {
       //   }
       // ],
       // "sort-vars": [
       //   [""],
-      //   function(options) {
+      //   (options): any => {
       //   }
       // ],
       // "space-before-blocks": [
       //   [""],
-      //   function(options) {
+      //   (options): any => {
       //   }
       // ],
       // "space-before-function-paren": [
       //   [""],
-      //   function(options) {
+      //   (options): any => {
       //   }
       // ],
       // "space-in-parens": [
       //   [""],
-      //   function(options) {
+      //   (options): any => {
       //   }
       // ],
       // "space-infix-ops": [
       //   [""],
-      //   function(options) {
+      //   (options): any => {
       //   }
       // ],
       // "space-unary-ops": [
       //   [""],
-      //   function(options) {
+      //   (options): any => {
       //   }
       // ],
       // "spaced-comment": [
       //   [""],
-      //   function(options) {
+      //   (options): any => {
       //   }
       // ],
       // "switch-colon-spacing": [
       //   [""],
-      //   function(options) {
+      //   (options): any => {
       //   }
       // ],
       // "template-tag-spacing": [
       //   [""],
-      //   function(options) {
+      //   (options): any => {
       //   }
       // ],
       // "unicode-bom": [
       //   [""],
-      //   function(options) {
+      //   (options): any => {
       //   }
       // ],
       // "wrap-regex": [
       //   [""],
-      //   function(options) {
+      //   (options): any => {
       //   }
       // ],
       // "arrow-body-style": [
       //   [""],
-      //   function(options) {
+      //   (options): any => {
       //   }
       // ],
       "arrow-parens": [
         ["arrow_parens"],
-        function(options) {
-          if(options.arrow_parens) {
+        (options): any => {
+          if (options.arrow_parens) {
             return [2, options.arrow_parens]
           }
           return 0;
@@ -443,82 +443,82 @@ export const beautifier: Beautifier = {
       ],
       // "arrow-spacing": [
       //   [""],
-      //   function(options) {
+      //   (options): any => {
       //   }
       // ],
       // "generator-star-spacing": [
       //   [""],
-      //   function(options) {
+      //   (options): any => {
       //   }
       // ],
       // "no-confusing-arrow": [
       //   [""],
-      //   function(options) {
+      //   (options): any => {
       //   }
       // ],
       // "no-useless-computed-key": [
       //   [""],
-      //   function(options) {
+      //   (options): any => {
       //   }
       // ],
       // "no-useless-rename": [
       //   [""],
-      //   function(options) {
+      //   (options): any => {
       //   }
       // ],
       // "no-var": [
       //   [""],
-      //   function(options) {
+      //   (options): any => {
       //   }
       // ],
       // "object-shorthand": [
       //   [""],
-      //   function(options) {
+      //   (options): any => {
       //   }
       // ],
       // "prefer-arrow-callback": [
       //   [""],
-      //   function(options) {
+      //   (options): any => {
       //   }
       // ],
       // "prefer-const": [
       //   [""],
-      //   function(options) {
+      //   (options): any => {
       //   }
       // ],
       // "prefer-numeric-literals": [
       //   [""],
-      //   function(options) {
+      //   (options): any => {
       //   }
       // ],
       // "prefer-spread": [
       //   [""],
-      //   function(options) {
+      //   (options): any => {
       //   }
       // ],
       // "prefer-template": [
       //   [""],
-      //   function(options) {
+      //   (options): any => {
       //   }
       // ],
       // "rest-spread-spacing": [
       //   [""],
-      //   function(options) {
+      //   (options): any => {
       //   }
       // ],
       // "sort-imports": [
       //   [""],
-      //   function(options) {
+      //   (options): any => {
       //   }
       // ],
       // "template-curly-spacing": [
       //   [""],
-      //   function(options) {
+      //   (options): any => {
       //   }
       // ],
       // "yield-star-spacing": [
       //   [""],
-      //   function(options) {
+      //   (options): any => {
       //   }
       // ]
     },
