@@ -1,5 +1,4 @@
 import { Beautifier, Language } from "unibeautify";
-import { wrapBeautifier, AtomPackage } from "unibeautify-beautifier";
 const CLIEngine = require("eslint").CLIEngine;
 
 const pkg = require("../package.json");
@@ -549,16 +548,6 @@ export const beautifier: Beautifier = {
   }
 };
 
-export function provideBeautifier() {
-  return beautifier;
-}
-
 const config = {};
 
-const wrappedBeautifier: Beautifier | AtomPackage = wrapBeautifier(
-  pkg,
-  beautifier,
-  config
-);
-export { Beautifier, AtomPackage };
-export default wrappedBeautifier;
+export default beautifier;
