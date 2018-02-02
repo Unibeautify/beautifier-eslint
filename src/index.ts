@@ -158,13 +158,14 @@ export const beautifier: Beautifier = {
       "comma-dangle": [
         ["end_with_comma"],
         (options): any => {
-          if (options.end_with_comma === true) {
-            return [2, "always"]
+          switch (options.end_with_comma) {
+            case true:
+              return [2, "always"]
+            case false:
+              return [2, "never"]
+            default:
+              return 0;
           }
-          else if (options.end_with_comma === false) {
-            return [2, "never"]
-          }
-          return 0;
         }
       ],
       // "comma-style": [
@@ -267,12 +268,14 @@ export const beautifier: Beautifier = {
       "no-trailing-spaces": [
         ["remove_trailing_whitespace"],
         (options): any => {
-          if (options.remove_trailing_whitespace === true) {
-            return [2, {"skipBlankLines": true, "ignoreComments": true}]
-          } else if (options.remove_trailing_whitespace === false) {
-            return [2, {"skipBlankLines": false, "ignoreComments": false}]
+          switch (options.remove_trailing_whitespace) {
+            case true:
+              return [2, {"skipBlankLines": true, "ignoreComments": true}]
+            case false:
+              return [2, {"skipBlankLines": false, "ignoreComments": false}]
+            default:
+              return 0;
           }
-          return 0;
         }
       ],
       // "no-unneeded-ternary": [
@@ -298,12 +301,14 @@ export const beautifier: Beautifier = {
       "object-curly-spacing": [
         ["object_curly_spacing"],
         (options): any => {
-          if (options.object_curly_spacing === true) {
-            return [2, "always"]
-          } else if (options.object_curly_spacing === false) {
-            return [2, "never"]
+          switch (options.object_curly_spacing) {
+            case true:
+              return [2, "always"]
+            case false:
+              return [2, "never"]
+            default:
+              return 0;
           }
-          return 0;
         }
       ],
       // "object-property-newline": [
@@ -354,12 +359,14 @@ export const beautifier: Beautifier = {
       "semi": [
         ["end_with_semicolon"],
         (options): any => {
-          if (options.end_with_semicolon === true) {
-            return [2, "always"]
-          } else if (options.end_with_semicolon === false) {
-            return [2, "never"]
+          switch (options.end_with_semicolon) {
+            case true:
+              return [2, "always"]
+            case false:
+              return [2, "never"]
+            default:
+              return 0;
           }
-          return 0;
         }
       ],
       // "semi-spacing": [
