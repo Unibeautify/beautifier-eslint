@@ -24,7 +24,7 @@ function testCommaAtEnd(endingComma) {
         languageName: "JavaScript",
         options: {
           JavaScript: {
-            end_with_comma: [2, endWithComma]
+            end_with_comma: endWithComma
           }
         },
         text
