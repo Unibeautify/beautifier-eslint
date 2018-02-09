@@ -548,6 +548,4 @@ export const beautifier: Beautifier = {
   }
 };
 
-const config = {};
-
 export default beautifier;
