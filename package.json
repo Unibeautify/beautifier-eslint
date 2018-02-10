@@ -25,16 +25,15 @@
     "url": "https://github.com/Unibeautify/beautifier-eslint/issues"
   },
   "homepage": "https://github.com/Unibeautify/beautifier-eslint#readme",
-  "dependencies": {
+  "peerDependencies": {
+    "unibeautify": "^0.5.0",
     "eslint": "^4.17.0"
   },
   "devDependencies": {
     "@types/node": "^8.9.1",
     "ava": "^0.25.0",
+    "eslint": "^4.17.0",
     "typescript": "^2.7.1",
-    "unibeautify": "^0.5.0"
-  },
-  "package-deps": [
-    "atom-beautify"
-  ]
+    "unibeautify": "^0.7.0"
+  }
 }

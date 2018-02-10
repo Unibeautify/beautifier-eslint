@@ -5,7 +5,7 @@ const pkg = require("../package.json");
 
 export const beautifier: Beautifier = {
   name: "ESLint",
-  // link: "https://github.com/eslint/eslint",
+  package: pkg,
   options: {
     _: {
       // "no-extra-boolean-cast": [
