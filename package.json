@@ -8,7 +8,8 @@
     "prepublishOnly": "npm run build",
     "build": "tsc",
     "jest": "jest",
-    "test": "npm run jest"
+    "test": "npm run jest",
+    "lint": "tslint {src,test}/**/*.ts"
   },
   "repository": {
     "type": "git",
@@ -34,10 +35,17 @@
     "@types/lodash": "^4.4.71",
     "@types/node": "^8.9.1",
     "ava": "^0.25.0",
+    "coveralls": "^3.0.0",
     "eslint": "^4.17.0",
     "jest": "^22.2.2",
+    "tslint": "^5.7.0",
+    "tslint-clean-code": "^0.2.3",
+    "tslint-microsoft-contrib": "^5.0.1",
     "ts-jest": "^22.0.4",
     "typescript": "^2.7.1",
     "unibeautify": "^0.7.0"
+  },
+  "dependencies": {
+    "lodash": "^4.15.0"
   }
 }
