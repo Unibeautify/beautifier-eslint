@@ -1,17 +1,16 @@
-import test from "ava";
 import { newUnibeautify, Beautifier } from "unibeautify";
-import beautifier from "../../dist";
+import beautifier from "../../src";
 
-test.beforeEach(t => {
-  t.context.unibeautify = newUnibeautify();
+beforeEach(() => {
+  const unibeautify = newUnibeautify();
 });
 
 testCommaAtEnd("always");
 testCommaAtEnd("never");
 
-function testCommaAtEnd(endingComma) {
-  test(`should successfully beautify JavaScript text with commaDangle=${endingComma}`, t => {
-    const { unibeautify } = t.context;
+function testCommaAtEnd(endingComma: string) {
+  test(`should successfully beautify JavaScript text with commaDangle=${endingComma}`, () => {
+    const unibeautify = newUnibeautify();
     unibeautify.loadBeautifier(beautifier);
 
     const endWithComma = endingComma === "always";
@@ -30,7 +29,7 @@ function testCommaAtEnd(endingComma) {
         text
       })
       .then(results => {
-        t.is(results, beautifierResult);
+        expect(results).toBe(beautifierResult);
       });
   });
 }
