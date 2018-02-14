@@ -264,19 +264,19 @@ export const beautifier: Beautifier = {
       //   (options): any => {
       //   }
       // ],
-      "no-trailing-spaces": [
-        ["remove_trailing_whitespace"],
-        (options): any => {
-          switch (options.remove_trailing_whitespace) {
-            case true:
-              return [2, {"skipBlankLines": true, "ignoreComments": true}];
-            case false:
-              return [2, {"skipBlankLines": false, "ignoreComments": false}];
-            default:
-              return 0;
-          }
-        }
-      ],
+      // "no-trailing-spaces": [
+      //   ["remove_trailing_whitespace"],
+      //   (options): any => {
+      //     switch (options.remove_trailing_whitespace) {
+      //       case true:
+      //         return [2, {"skipBlankLines": false, "ignoreComments": false}];
+      //       case false:
+      //         return [2, {"skipBlankLines": true, "ignoreComments": true}];
+      //       default:
+      //         return 0;
+      //     }
+      //   }
+      // ],
       // "no-unneeded-ternary": [
       //   [""],
       //   (options): any => {
@@ -535,6 +535,9 @@ export const beautifier: Beautifier = {
     return new Promise<string>((resolve, reject) => {
       const cli = new CLIEngine({
         fix: true,
+        parserOptions: {
+          "ecmaVersion": 6
+        },
         rules: data.options
       });
       const text = cli.executeOnText(data.text).results[0].output;
