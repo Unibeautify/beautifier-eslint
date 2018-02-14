@@ -208,7 +208,7 @@
         "no-regex-spaces": true,
         "no-require-imports": false,
         "no-reserved-keywords": true,
-        "no-shadowed-variable": true,
+        "no-shadowed-variable": false,
         "no-single-line-block-comment": true,
         "no-sparse-arrays": true,
         "no-string-based-set-immediate": true,
