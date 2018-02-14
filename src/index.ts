@@ -159,9 +159,9 @@ export const beautifier: Beautifier = {
         (options): any => {
           switch (options.end_with_comma) {
             case true:
-              return [2, "always"]
+              return [2, "always"];
             case false:
-              return [2, "never"]
+              return [2, "never"];
             default:
               return 0;
           }
@@ -249,7 +249,7 @@ export const beautifier: Beautifier = {
         ["break_chained_methods"],
         (options): any => {
           if (options.break_chained_methods === true) {
-            return [2, {"ignoreChainWithDepth": 2 }]
+            return [2, {"ignoreChainWithDepth": 2 }];
           }
           return 0;
         }
@@ -269,9 +269,9 @@ export const beautifier: Beautifier = {
         (options): any => {
           switch (options.remove_trailing_whitespace) {
             case true:
-              return [2, {"skipBlankLines": true, "ignoreComments": true}]
+              return [2, {"skipBlankLines": true, "ignoreComments": true}];
             case false:
-              return [2, {"skipBlankLines": false, "ignoreComments": false}]
+              return [2, {"skipBlankLines": false, "ignoreComments": false}];
             default:
               return 0;
           }
@@ -302,9 +302,9 @@ export const beautifier: Beautifier = {
         (options): any => {
           switch (options.object_curly_spacing) {
             case true:
-              return [2, "always"]
+              return [2, "always"];
             case false:
-              return [2, "never"]
+              return [2, "never"];
             default:
               return 0;
           }
@@ -351,7 +351,7 @@ export const beautifier: Beautifier = {
           if (!options.quotes || options.quotes === "none") {
             return 0;
           } else {
-            return [2, options.quotes]
+            return [2, options.quotes];
           }
         }
       ],
@@ -360,9 +360,9 @@ export const beautifier: Beautifier = {
         (options): any => {
           switch (options.end_with_semicolon) {
             case true:
-              return [2, "always"]
+              return [2, "always"];
             case false:
-              return [2, "never"]
+              return [2, "never"];
             default:
               return 0;
           }
@@ -442,7 +442,7 @@ export const beautifier: Beautifier = {
         ["arrow_parens"],
         (options): any => {
           if (options.arrow_parens) {
-            return [2, options.arrow_parens]
+            return [2, options.arrow_parens];
           }
           return 0;
         }
@@ -528,10 +528,10 @@ export const beautifier: Beautifier = {
       //   }
       // ]
     },
-    JSX: true,
-    JavaScript: true
+    JavaScript: true,
+    JSX: true
   },
-  beautify(data) {
+  beautify(data: any) {
     return new Promise<string>((resolve, reject) => {
       const cli = new CLIEngine({
         fix: true,
@@ -540,8 +540,7 @@ export const beautifier: Beautifier = {
       const text = cli.executeOnText(data.text).results[0].output;
       if (text) {
         return resolve(text);
-      }
-      else {
+      } else {
         return resolve(data.text);
       }
     });
