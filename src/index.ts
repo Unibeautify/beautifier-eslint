@@ -1,4 +1,4 @@
-import { Beautifier, Language } from "unibeautify";
+import { Beautifier, Language, BeautifierBeautifyData } from "unibeautify";
 const CLIEngine = require("eslint").CLIEngine;
 
 const pkg = require("../package.json");
@@ -531,7 +531,7 @@ export const beautifier: Beautifier = {
     JavaScript: true,
     JSX: true
   },
-  beautify(data: any) {
+  beautify(data: BeautifierBeautifyData) {
     return new Promise<string>((resolve, reject) => {
       const cli = new CLIEngine({
         fix: true,

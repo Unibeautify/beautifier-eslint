@@ -1,10 +1,6 @@
 import { newUnibeautify, Beautifier } from "unibeautify";
 import beautifier from "../../src";
 
-beforeEach(() => {
-  const unibeautify = newUnibeautify();
-});
-
 testCommaAtEnd("always");
 testCommaAtEnd("never");
 
