@@ -1,10 +1,10 @@
 import { newUnibeautify, Beautifier } from "unibeautify";
 import beautifier from "../../src";
 
-testNewLinePerChainedCall(true);
+testNewLinePerChainedCallWhenNewLine();
 
-function testNewLinePerChainedCall(newLine: boolean) {
-  test(`should successfully beautify JavaScript text with newLine=${newLine}`, () => {
+function testNewLinePerChainedCallWhenNewLine() {
+  test(`should successfully beautify JavaScript text with a newline`, () => {
     const unibeautify = newUnibeautify();
     unibeautify.loadBeautifier(beautifier);
 
@@ -16,7 +16,7 @@ function testNewLinePerChainedCall(newLine: boolean) {
         languageName: "JavaScript",
         options: {
           JavaScript: {
-            break_chained_methods: newLine
+            break_chained_methods: true
           }
         },
         text

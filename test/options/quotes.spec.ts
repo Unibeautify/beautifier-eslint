@@ -1,15 +1,15 @@
 import { newUnibeautify, Beautifier } from "unibeautify";
 import beautifier from "../../src";
 
-testWithSingleQuote(true);
-testWithSingleQuote(false);
+testWithSingleQuote();
+testWithDoubleQuote();
 
-function testWithSingleQuote(singleQuote: boolean) {
-  test(`should successfully beautify JavaScript text with ${singleQuote ? "single" : "double"} quotes`, () => {
+function testWithSingleQuote() {
+  test(`should successfully beautify JavaScript text with single quotes`, () => {
     const unibeautify = newUnibeautify();
     unibeautify.loadBeautifier(beautifier);
 
-    const quote = singleQuote ? "'" : '"';
+    const quote = "'";
     const text = `console.log('hello world');\nconsole.log("hello world");\n`;
     const beautifierResult = `console.log(${quote}hello world${quote});\nconsole.log(${quote}hello world${quote});\n`;
 
@@ -18,7 +18,32 @@ function testWithSingleQuote(singleQuote: boolean) {
         languageName: "JavaScript",
         options: {
           JavaScript: {
-            quotes: singleQuote ? "single" : "double",
+            quotes: "single"
+          }
+        },
+        text
+      })
+      .then(results => {
+        expect(results).toBe(beautifierResult);
+      });
+  });
+}
+
+function testWithDoubleQuote() {
+  test(`should successfully beautify JavaScript text with double quotes`, () => {
+    const unibeautify = newUnibeautify();
+    unibeautify.loadBeautifier(beautifier);
+
+    const quote = '"';
+    const text = `console.log('hello world');\nconsole.log("hello world");\n`;
+    const beautifierResult = `console.log(${quote}hello world${quote});\nconsole.log(${quote}hello world${quote});\n`;
+
+    return unibeautify
+      .beautify({
+        languageName: "JavaScript",
+        options: {
+          JavaScript: {
+            quotes: "double"
           }
         },
         text
