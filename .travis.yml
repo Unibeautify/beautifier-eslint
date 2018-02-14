@@ -16,6 +16,9 @@ before_script:
       curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
     elif [[ "$TRAVIS_OS_NAME" == "osx" ]]; then
       curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-darwin-amd64 > ./cc-test-reporter
+    else
+      echo Error:TRAVIS_OS_NAME && exit 1;
+    fi
   - chmod +x ./cc-test-reporter
   - ./cc-test-reporter before-build
 script:
