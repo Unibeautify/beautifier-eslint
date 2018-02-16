@@ -41,7 +41,7 @@ checks:
     config:
       threshold: #language-specific defaults. overrides affect all languages.
 exclude_patterns:
-- dist/
-- **/node_modules/
-- /test/
-- **/*.d.ts
+- "dist/"
+- "**/node_modules/"
+- "/test/"
+- "**/*.d.ts"
