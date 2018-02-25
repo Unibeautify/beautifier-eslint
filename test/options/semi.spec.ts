@@ -14,10 +14,10 @@ function testSemicolon(semi: string) {
         languageName: "JavaScript",
         options: {
           JavaScript: {
-            end_with_semicolon: insertSemi
-          }
+            end_with_semicolon: insertSemi,
+          },
         },
-        text
+        text,
       })
       .then(results => {
         expect(results).toBe(beautifierResult);
