@@ -142,11 +142,6 @@ const options: BeautifierOptions = {
     //   (options): any => {
     //   }
     // ],
-    // "comma-dangle": [
-    //   [""],
-    //   (options): any => {
-    //   }
-    // ],
     "comma-dangle": [
       ["end_with_comma"],
       (options): any => {
@@ -191,11 +186,8 @@ const options: BeautifierOptions = {
     //   }
     // ],
     // "indent": [
-    //   ["force_indentation"],
+    //   [""],
     //   (options): any => {
-    //     if (options.force_indentation === true) {
-    //
-    //     }
     //   }
     // ],
     // "jsx-quotes": [
@@ -261,12 +253,6 @@ const options: BeautifierOptions = {
     //   ["remove_trailing_whitespace"],
     //   (options): any => {
     //     switch (options.remove_trailing_whitespace) {
-    //       case true:
-    //         return [2, {"skipBlankLines": false, "ignoreComments": false}];
-    //       case false:
-    //         return [2, {"skipBlankLines": true, "ignoreComments": true}];
-    //       default:
-    //         return 0;
     //     }
     //   }
     // ],

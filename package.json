@@ -27,8 +27,8 @@
   },
   "homepage": "https://github.com/Unibeautify/beautifier-eslint#readme",
   "peerDependencies": {
-    "unibeautify": "^0.7.0",
-    "eslint": "^4.17.0"
+    "unibeautify": "^0.8.0",
+    "eslint": "^4.18.1"
   },
   "devDependencies": {
     "@types/jest": "^22.1.2",
