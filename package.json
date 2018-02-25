@@ -1,6 +1,6 @@
 {
   "name": "@unibeautify/beautifier-eslint",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "ESLint beautifier for Unibeautify",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
