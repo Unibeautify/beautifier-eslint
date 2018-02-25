@@ -8,16 +8,18 @@ function testArrowParens(arrowParens: string) {
     unibeautify.loadBeautifier(beautifier);
     const addArrowParens = arrowParens === "always";
     const text = `a.then(${addArrowParens ? "foo" : "(foo)"} => {});`;
-    const beautifierResult = `a.then(${addArrowParens ? "(foo)" : "foo"} => {});`;
+    const beautifierResult = `a.then(${
+      addArrowParens ? "(foo)" : "foo"
+    } => {});`;
     return unibeautify
       .beautify({
         languageName: "JavaScript",
         options: {
           JavaScript: {
-            arrow_parens: arrowParens
-          }
+            arrow_parens: arrowParens,
+          },
         },
-        text
+        text,
       })
       .then(results => {
         expect(results).toBe(beautifierResult);

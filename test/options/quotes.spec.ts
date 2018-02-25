@@ -11,10 +11,10 @@ test(`should successfully beautify JavaScript text with single quotes`, () => {
       languageName: "JavaScript",
       options: {
         JavaScript: {
-          quotes: "single"
-        }
+          quotes: "single",
+        },
       },
-      text
+      text,
     })
     .then(results => {
       expect(results).toBe(beautifierResult);
@@ -31,10 +31,10 @@ test(`should successfully beautify JavaScript text with double quotes`, () => {
       languageName: "JavaScript",
       options: {
         JavaScript: {
-          quotes: "double"
-        }
+          quotes: "double",
+        },
       },
-      text
+      text,
     })
     .then(results => {
       expect(results).toBe(beautifierResult);

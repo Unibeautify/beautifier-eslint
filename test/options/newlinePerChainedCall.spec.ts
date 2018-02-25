@@ -10,10 +10,10 @@ test(`should successfully beautify JavaScript text with a newline`, () => {
       languageName: "JavaScript",
       options: {
         JavaScript: {
-          break_chained_methods: true
-        }
+          break_chained_methods: true,
+        },
       },
-      text
+      text,
     })
     .then(results => {
       expect(results).toBe(beautifierResult);

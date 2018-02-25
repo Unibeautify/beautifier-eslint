@@ -8,16 +8,18 @@ function testObjectCurlySpacing(curlySpacing: string) {
     unibeautify.loadBeautifier(beautifier);
     const addSpaceCurly = curlySpacing === "always";
     const text = `var obj = { 'foo': 'bar' };`;
-    const beautifierResult = `var obj = {${addSpaceCurly ? " " : ""}'foo': 'bar'${addSpaceCurly ? " " : ""}};`;
+    const beautifierResult = `var obj = {${
+      addSpaceCurly ? " " : ""
+    }'foo': 'bar'${addSpaceCurly ? " " : ""}};`;
     return unibeautify
       .beautify({
         languageName: "JavaScript",
         options: {
           JavaScript: {
-            object_curly_spacing: addSpaceCurly
-          }
+            object_curly_spacing: addSpaceCurly,
+          },
         },
-        text
+        text,
       })
       .then(results => {
         expect(results).toBe(beautifierResult);
