@@ -240,7 +240,7 @@ const options: BeautifierOptions = {
           return [2, {"overrides": {"if": {"after": true}}}];
         } else if (options.space_before_conditional === false) {
           return [2, {"overrides": {"if": {"after": false}}}];
-        } else{
+        } else {
           return 0;
         }
       }
