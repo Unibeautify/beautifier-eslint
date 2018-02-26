@@ -10,7 +10,7 @@ test(`should successfully beautify JavaScript with a space before function paren
       languageName: "JavaScript",
       options: {
         JavaScript: {
-          space_after_anon_function: true
+          space_after_anon_function: true,
         },
       },
       text,
@@ -29,7 +29,7 @@ test(`should successfully beautify JavaScript with no space before function pare
       languageName: "JavaScript",
       options: {
         JavaScript: {
-          space_after_anon_function: false
+          space_after_anon_function: false,
         },
       },
       text,

@@ -10,7 +10,7 @@ test(`should successfully beautify JavaScript with a space before if conditional
       languageName: "JavaScript",
       options: {
         JavaScript: {
-          space_before_conditional: true
+          space_before_conditional: true,
         },
       },
       text,
@@ -29,7 +29,7 @@ test(`should successfully beautify JavaScript with no space before if conditiona
       languageName: "JavaScript",
       options: {
         JavaScript: {
-          space_before_conditional: false
+          space_before_conditional: false,
         },
       },
       text,

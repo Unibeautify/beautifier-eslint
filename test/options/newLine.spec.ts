@@ -10,10 +10,10 @@ test(`should successfully beautify JavaScript text with a newline at the end of 
       languageName: "JavaScript",
       options: {
         JavaScript: {
-          end_with_newline: true
-        }
+          end_with_newline: true,
+        },
       },
-      text
+      text,
     })
     .then(results => {
       expect(results).toBe(beautifierResult);
@@ -29,10 +29,10 @@ test(`should successfully beautify JavaScript text with no newline at end of fil
       languageName: "JavaScript",
       options: {
         JavaScript: {
-          end_with_newline: false
-        }
+          end_with_newline: false,
+        },
       },
-      text
+      text,
     })
     .then(results => {
       expect(results).toBe(beautifierResult);

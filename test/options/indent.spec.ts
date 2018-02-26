@@ -8,7 +8,8 @@ function testWithIndentSize(indentSize: number, indentStyle: string) {
     const unibeautify = newUnibeautify();
     unibeautify.loadBeautifier(beautifier);
     const indentChar = indentStyle === "tab" ? "\t" : " ";
-    const indentation = indentStyle === "tab" ? "\t" : indentChar.repeat(indentSize);
+    const indentation =
+      indentStyle === "tab" ? "\t" : indentChar.repeat(indentSize);
     const text = `function test(n) {return n + 1;}`;
     const beautifierResult = `function test(n) {\n${indentation}return n + 1;\n}`;
     return unibeautify
@@ -19,9 +20,9 @@ function testWithIndentSize(indentSize: number, indentStyle: string) {
             indent_style: indentStyle,
             indent_size: indentSize,
             brace_style: "collapse",
-          }
+          },
         },
-        text
+        text,
       })
       .then(results => {
         expect(results).toBe(beautifierResult);

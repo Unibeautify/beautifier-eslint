@@ -10,7 +10,7 @@ test(`should successfully beautify JavaScript with a spaces inside of parenthese
       languageName: "JavaScript",
       options: {
         JavaScript: {
-          space_in_paren: true
+          space_in_paren: true,
         },
       },
       text,
@@ -29,7 +29,7 @@ test(`should successfully beautify JavaScript with a no spaces inside of parenth
       languageName: "JavaScript",
       options: {
         JavaScript: {
-          space_in_paren: false
+          space_in_paren: false,
         },
       },
       text,

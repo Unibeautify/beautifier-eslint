@@ -12,9 +12,9 @@ test(`should successfully beautify JavaScript text with a comma at the end of a 
         JavaScript: {
           comma_first: false,
           brace_style: "collapse",
-        }
+        },
       },
-      text
+      text,
     })
     .then(results => {
       expect(results).toBe(beautifierResult);
@@ -32,9 +32,9 @@ test(`should successfully beautify JavaScript text with a comma at the beginning
         JavaScript: {
           comma_first: true,
           brace_style: "collapse",
-        }
+        },
       },
-      text
+      text,
     })
     .then(results => {
       expect(results).toBe(beautifierResult);

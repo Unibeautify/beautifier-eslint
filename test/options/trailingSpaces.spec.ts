@@ -10,7 +10,7 @@ test(`should successfully beautify JavaScript with no trailing whitespace`, () =
       languageName: "JavaScript",
       options: {
         JavaScript: {
-          remove_trailing_whitespace: true
+          remove_trailing_whitespace: true,
         },
       },
       text,
