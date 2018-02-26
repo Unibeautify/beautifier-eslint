@@ -1,6 +1,7 @@
 import { BeautifierOptions } from "unibeautify";
 const options: BeautifierOptions = {
   JavaScript: {
+// unibeautify:disable
     // "no-extra-boolean-cast": [
     //   [""],
     //   (options): any => {
@@ -566,6 +567,7 @@ const options: BeautifierOptions = {
     //   (options): any => {
     //   }
     // ]
+// unibeautify:enable    
   }
 };
 
