@@ -42,6 +42,6 @@
     "tslint-clean-code": "^0.2.3",
     "tslint-microsoft-contrib": "^5.0.1",
     "typescript": "^2.7.1",
-    "unibeautify": "^0.8.0"
+    "unibeautify": "^0.9.1"
   }
 }
