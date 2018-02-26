@@ -164,21 +164,37 @@ const options: BeautifierOptions = {
         }
       }
     ],
-    // "comma-style": [
-    //   [""],
-    //   (options): any => {
-    //   }
-    // ],
+    "comma-style": [
+      ["comma_first"],
+      (options): any => {
+        switch (options.comma_first) {
+          case true:
+            return [2, "first"];
+          case false:
+            return [2, "last"];
+          default:
+            return 0;
+        }
+      }
+    ],
     // "computed-property-spacing": [
     //   [""],
     //   (options): any => {
     //   }
     // ],
-    // "eol-last": [
-    //   [""],
-    //   (options): any => {
-    //   }
-    // ],
+    "eol-last": [
+      ["end_with_newline"],
+      (options): any => {
+        switch (options.end_with_newline) {
+          case true:
+            return [2, "always"];
+          case false:
+            return [2, "never"];
+          default:
+            return 0;
+        }
+      }
+    ],
     // "func-call-spacing": [
     //   [""],
     //   (options): any => {
@@ -266,13 +282,17 @@ const options: BeautifierOptions = {
     //   (options): any => {
     //   }
     // ],
-    // "no-trailing-spaces": [
-    //   ["remove_trailing_whitespace"],
-    //   (options): any => {
-    //     switch (options.remove_trailing_whitespace) {
-    //     }
-    //   }
-    // ],
+    "no-trailing-spaces": [
+      ["remove_trailing_whitespace"],
+      (options): any => {
+        switch (options.remove_trailing_whitespace) {
+          case true:
+            return 2;
+          default:
+            return 0;
+        }
+      }
+    ],
     // "no-unneeded-ternary": [
     //   [""],
     //   (options): any => {
