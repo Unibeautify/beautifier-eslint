@@ -1,4 +1,5 @@
 import { BeautifierOptions } from "unibeautify";
+// unibeautify:disable
 const options: BeautifierOptions = {
   JavaScript: {
     // "no-extra-boolean-cast": [
@@ -164,21 +165,37 @@ const options: BeautifierOptions = {
         }
       }
     ],
-    // "comma-style": [
-    //   [""],
-    //   (options): any => {
-    //   }
-    // ],
+    "comma-style": [
+      ["comma_first"],
+      (options): any => {
+        switch (options.comma_first) {
+          case true:
+            return [2, "first"];
+          case false:
+            return [2, "last"];
+          default:
+            return 0;
+        }
+      }
+    ],
     // "computed-property-spacing": [
     //   [""],
     //   (options): any => {
     //   }
     // ],
-    // "eol-last": [
-    //   [""],
-    //   (options): any => {
-    //   }
-    // ],
+    "eol-last": [
+      ["end_with_newline"],
+      (options): any => {
+        switch (options.end_with_newline) {
+          case true:
+            return [2, "always"];
+          case false:
+            return [2, "never"];
+          default:
+            return 0;
+        }
+      }
+    ],
     // "func-call-spacing": [
     //   [""],
     //   (options): any => {
@@ -217,11 +234,18 @@ const options: BeautifierOptions = {
     //   (options): any => {
     //   }
     // ],
-    // "keyword-spacing": [
-    //   [""],
-    //   (options): any => {
-    //   }
-    // ],
+    "keyword-spacing": [
+      ["space_before_conditional"],
+      (options): any => {
+        if (options.space_before_conditional === true) {
+          return [2, {"overrides": {"if": {"after": true}}}];
+        } else if (options.space_before_conditional === false) {
+          return [2, {"overrides": {"if": {"after": false}}}];
+        } else {
+          return 0;
+        }
+      }
+    ],
     // "linebreak-style": [
     //   [""],
     //   (options): any => {
@@ -266,13 +290,17 @@ const options: BeautifierOptions = {
     //   (options): any => {
     //   }
     // ],
-    // "no-trailing-spaces": [
-    //   ["remove_trailing_whitespace"],
-    //   (options): any => {
-    //     switch (options.remove_trailing_whitespace) {
-    //     }
-    //   }
-    // ],
+    "no-trailing-spaces": [
+      ["remove_trailing_whitespace"],
+      (options): any => {
+        switch (options.remove_trailing_whitespace) {
+          case true:
+            return 2;
+          default:
+            return 0;
+        }
+      }
+    ],
     // "no-unneeded-ternary": [
     //   [""],
     //   (options): any => {
@@ -384,16 +412,32 @@ const options: BeautifierOptions = {
     //   (options): any => {
     //   }
     // ],
-    // "space-before-function-paren": [
-    //   [""],
-    //   (options): any => {
-    //   }
-    // ],
-    // "space-in-parens": [
-    //   [""],
-    //   (options): any => {
-    //   }
-    // ],
+    "space-before-function-paren": [
+      ["space_after_anon_function"],
+      (options): any => {
+        switch (options.space_after_anon_function) {
+          case true:
+            return [2, "always"];
+          case false:
+            return [2, "never"];
+          default:
+            return 0;
+        }
+      }
+    ],
+    "space-in-parens": [
+      ["space_in_paren"],
+      (options): any => {
+        switch (options.space_in_paren) {
+          case true:
+            return [2, "always"];
+          case false:
+            return [2, "never"];
+          default:
+            return 0;
+        }
+      }
+    ],
     // "space-infix-ops": [
     //   [""],
     //   (options): any => {
@@ -525,5 +569,5 @@ const options: BeautifierOptions = {
     // ]
   }
 };
-
+// unibeautify:enable
 export default options;

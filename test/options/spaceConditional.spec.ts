@@ -1,17 +1,16 @@
 import { newUnibeautify, Beautifier } from "unibeautify";
 import beautifier from "../../src";
-test(`should successfully beautify JavaScript text with single quotes`, () => {
+test(`should successfully beautify JavaScript with a space before if conditional`, () => {
   const unibeautify = newUnibeautify();
   unibeautify.loadBeautifier(beautifier);
-  const quote = "'";
-  const text = `console.log('hello world');\nconsole.log("hello world");\n`;
-  const beautifierResult = `console.log(${quote}hello world${quote});\nconsole.log(${quote}hello world${quote});\n`;
+  const text = `if(foo) {\n//...\n}`;
+  const beautifierResult = `if (foo) {\n//...\n}`;
   return unibeautify
     .beautify({
       languageName: "JavaScript",
       options: {
         JavaScript: {
-          quotes: "single",
+          space_before_conditional: true,
         },
       },
       text,
@@ -20,19 +19,17 @@ test(`should successfully beautify JavaScript text with single quotes`, () => {
       expect(results).toBe(beautifierResult);
     });
 });
-test(`should successfully beautify JavaScript text with double quotes`, () => {
+test(`should successfully beautify JavaScript with no space before if conditional`, () => {
   const unibeautify = newUnibeautify();
   unibeautify.loadBeautifier(beautifier);
-  // unibeautify:ignore-next-line
-  const quote = '"';
-  const text = `console.log('hello world');\nconsole.log("hello world");\n`;
-  const beautifierResult = `console.log(${quote}hello world${quote});\nconsole.log(${quote}hello world${quote});\n`;
+  const text = `if (foo) {\n//...\n}`;
+  const beautifierResult = `if(foo) {\n//...\n}`;
   return unibeautify
     .beautify({
       languageName: "JavaScript",
       options: {
         JavaScript: {
-          quotes: "double",
+          space_before_conditional: false,
         },
       },
       text,

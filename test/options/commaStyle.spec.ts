@@ -1,17 +1,17 @@
 import { newUnibeautify, Beautifier } from "unibeautify";
 import beautifier from "../../src";
-test(`should successfully beautify JavaScript text with single quotes`, () => {
+test(`should successfully beautify JavaScript text with a comma at the end of a line`, () => {
   const unibeautify = newUnibeautify();
   unibeautify.loadBeautifier(beautifier);
-  const quote = "'";
-  const text = `console.log('hello world');\nconsole.log("hello world");\n`;
-  const beautifierResult = `console.log(${quote}hello world${quote});\nconsole.log(${quote}hello world${quote});\n`;
+  const text = `var foo = 1\n,bar = 2;`;
+  const beautifierResult = `var foo = 1,\nbar = 2;`;
   return unibeautify
     .beautify({
       languageName: "JavaScript",
       options: {
         JavaScript: {
-          quotes: "single",
+          comma_first: false,
+          brace_style: "collapse",
         },
       },
       text,
@@ -20,19 +20,18 @@ test(`should successfully beautify JavaScript text with single quotes`, () => {
       expect(results).toBe(beautifierResult);
     });
 });
-test(`should successfully beautify JavaScript text with double quotes`, () => {
+test(`should successfully beautify JavaScript text with a comma at the beginning of a line`, () => {
   const unibeautify = newUnibeautify();
   unibeautify.loadBeautifier(beautifier);
-  // unibeautify:ignore-next-line
-  const quote = '"';
-  const text = `console.log('hello world');\nconsole.log("hello world");\n`;
-  const beautifierResult = `console.log(${quote}hello world${quote});\nconsole.log(${quote}hello world${quote});\n`;
+  const text = `var foo = 1,\nbar = 2;`;
+  const beautifierResult = `var foo = 1\n,bar = 2;`;
   return unibeautify
     .beautify({
       languageName: "JavaScript",
       options: {
         JavaScript: {
-          quotes: "double",
+          comma_first: true,
+          brace_style: "collapse",
         },
       },
       text,
