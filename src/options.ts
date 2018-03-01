@@ -214,7 +214,7 @@ const options: BeautifierOptions = {
     "indent": [
       ["indent_style", "indent_size", "unindent_chained_methods", "keep_array_indentation"],
       (options): any => {
-        let extraOptions: any = {};
+        const extraOptions: any = {};
         if (options.keep_array_indentation === true) {
           extraOptions.ArrayExpression = "off";
         }
