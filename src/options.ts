@@ -47,17 +47,11 @@ const options: BeautifierOptions = {
     //   (options): any => {
     //   }
     // ],
-    "eqeqeq": [
-      ["typesafe_equality_operators"],
-      (options): any => {
-        switch (options.typesafe_equality_operators) {
-          case true:
-            return [2, "always"];
-          default:
-            return 0;
-        }
-      }
-    ],
+    // "eqeqeq": [
+    //   ["typesafe_equality_operators"],
+    //   (options): any => {
+    //   }
+    // ],
     // "no-else-return": [
     //   [""],
     //   (options): any => {
