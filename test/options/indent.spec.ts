@@ -62,7 +62,7 @@ test(`should successfully beautify JavaScript text with original array indents`,
         JavaScript: {
           indent_style: "space",
           indent_size: 1,
-          unindent_chained_methods: true,
+          indent_chained_methods: false,
         },
       },
       text,
