@@ -1,7 +1,8 @@
 import { Beautifier, Language, BeautifierBeautifyData } from "unibeautify";
+import * as readPkgUp from "read-pkg-up";
 import options from "./options";
 const CLIEngine = require("eslint").CLIEngine;
-const pkg = require("../package.json");
+const { pkg } = readPkgUp.sync({ cwd: __dirname });
 export const beautifier: Beautifier = {
   name: "ESLint",
   package: pkg,

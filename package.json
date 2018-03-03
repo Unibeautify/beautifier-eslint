@@ -2,13 +2,15 @@
   "name": "@unibeautify/beautifier-eslint",
   "version": "0.4.0",
   "description": "ESLint beautifier for Unibeautify",
-  "main": "dist/index.js",
-  "typings": "dist/index.d.ts",
+  "main": "dist/src/index.js",
+  "typings": "dist/src/index.d.ts",
   "scripts": {
     "prepublishOnly": "npm run build",
-    "build": "tsc",
+    "build": "npm run clean && npm run compile",
+    "clean": "rimraf dist",
+    "compile": "tsc",
     "jest": "jest",
-    "test": "npm-run-all lint jest",
+    "test": "npm run build && npm run lint && npm run jest",
     "lint": "tslint {src,test}/**/*.ts"
   },
   "repository": {
@@ -27,21 +29,24 @@
   },
   "homepage": "https://github.com/Unibeautify/beautifier-eslint#readme",
   "peerDependencies": {
-    "unibeautify": "^0.9.3",
-    "eslint": "^4.18.1"
+    "unibeautify": "^0.10.0",
+    "eslint": "^4.18.2"
   },
   "devDependencies": {
     "@types/jest": "^22.1.4",
-    "@types/lodash": "^4.4.71",
     "@types/node": "^9.4.6",
-    "eslint": "^4.17.0",
-    "jest": "^22.2.2",
-    "npm-run-all": "^4.1.2",
-    "ts-jest": "^22.4.0",
-    "tslint": "^5.7.0",
+    "@types/read-pkg-up": "^3.0.1",
+    "eslint": "^4.18.2",
+    "jest": "^22.4.2",
+    "rimraf": "^2.6.2",
+    "ts-jest": "^22.4.1",
+    "tslint": "^5.9.1",
     "tslint-clean-code": "^0.2.5",
-    "tslint-microsoft-contrib": "^5.0.1",
-    "typescript": "^2.7.1",
-    "unibeautify": "^0.9.3"
+    "tslint-microsoft-contrib": "^5.0.3",
+    "typescript": "^2.7.2",
+    "unibeautify": "^0.10.0"
+  },
+  "dependencies": {
+    "read-pkg-up": "^3.0.0"
   }
 }
