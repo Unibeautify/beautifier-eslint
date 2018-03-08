@@ -29,3 +29,45 @@ function testWithIndentSize(indentSize: number, indentStyle: string) {
       });
   });
 }
+test(`should successfully beautify JavaScript text with original array indents`, () => {
+  const unibeautify = newUnibeautify();
+  unibeautify.loadBeautifier(beautifier);
+  const indentChar = " ";
+  const text = `var foo = [\n bar,\n    baz,\n qux\n]`;
+  return unibeautify
+    .beautify({
+      languageName: "JavaScript",
+      options: {
+        JavaScript: {
+          indent_style: "space",
+          indent_size: 1,
+          keep_array_indentation: true,
+        },
+      },
+      text,
+    })
+    .then(results => {
+      expect(results).toBe(text);
+    });
+});
+test(`should successfully beautify JavaScript text with original array indents`, () => {
+  const unibeautify = newUnibeautify();
+  unibeautify.loadBeautifier(beautifier);
+  const indentChar = " ";
+  const text = `foo\n.bar\n.baz()`;
+  return unibeautify
+    .beautify({
+      languageName: "JavaScript",
+      options: {
+        JavaScript: {
+          indent_style: "space",
+          indent_size: 1,
+          indent_chained_methods: false,
+        },
+      },
+      text,
+    })
+    .then(results => {
+      expect(results).toBe(text);
+    });
+});

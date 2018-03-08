@@ -48,7 +48,7 @@ const options: BeautifierOptions = {
     //   }
     // ],
     // "eqeqeq": [
-    //   [""],
+    //   ["typesafe_equality_operators"],
     //   (options): any => {
     //   }
     // ],
@@ -212,13 +212,20 @@ const options: BeautifierOptions = {
     //   }
     // ],
     "indent": [
-      ["indent_style", "indent_size"],
+      ["indent_style", "indent_size", "indent_chained_methods", "keep_array_indentation"],
       (options): any => {
+        const extraOptions: any = {};
+        if (options.keep_array_indentation === true) {
+          extraOptions.ArrayExpression = "off";
+        }
+        if (options.indent_chained_methods === false) {
+          extraOptions.MemberExpression = "off";
+        }
         switch (options.indent_style) {
           case "tab":
-            return [2, "tab"];
+            return [2, "tab", extraOptions];
           case "space":
-            return [2, options.indent_size];
+            return [2, options.indent_size, extraOptions];
           default:
             return 0;
         }
