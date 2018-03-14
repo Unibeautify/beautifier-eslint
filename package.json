@@ -29,12 +29,12 @@
   },
   "homepage": "https://github.com/Unibeautify/beautifier-eslint#readme",
   "peerDependencies": {
-    "unibeautify": "^0.10.0",
+    "unibeautify": "^0.10.1",
     "eslint": "^4.18.2"
   },
   "devDependencies": {
-    "@types/jest": "^22.1.4",
-    "@types/node": "^9.4.6",
+    "@types/jest": "^22.2.0",
+    "@types/node": "^9.4.7",
     "@types/read-pkg-up": "^3.0.1",
     "eslint": "^4.18.2",
     "jest": "^22.4.2",
@@ -44,7 +44,7 @@
     "tslint-clean-code": "^0.2.5",
     "tslint-microsoft-contrib": "^5.0.3",
     "typescript": "^2.7.2",
-    "unibeautify": "^0.10.0"
+    "unibeautify": "^0.10.1"
   },
   "dependencies": {
     "read-pkg-up": "^3.0.0"
