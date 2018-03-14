@@ -29,7 +29,7 @@
   },
   "homepage": "https://github.com/Unibeautify/beautifier-eslint#readme",
   "peerDependencies": {
-    "unibeautify": "^0.10.1",
+    "unibeautify": ">= 0.9.x",
     "eslint": "^4.18.2"
   },
   "devDependencies": {
