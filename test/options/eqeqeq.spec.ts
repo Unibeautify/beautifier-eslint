@@ -10,7 +10,7 @@ test.skip(`should use === in place of ==`, () => {
       languageName: "JavaScript",
       options: {
         JavaScript: {
-          typesafe_equality_operators: true
+          typesafe_equality_operators: true,
         },
       },
       text,
@@ -29,7 +29,7 @@ test.skip(`should use !== in place of !=`, () => {
       languageName: "JavaScript",
       options: {
         JavaScript: {
-          typesafe_equality_operators: true
+          typesafe_equality_operators: true,
         },
       },
       text,
