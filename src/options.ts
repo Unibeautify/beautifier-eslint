@@ -50,6 +50,12 @@ const options: BeautifierOptions = {
     // "eqeqeq": [
     //   ["typesafe_equality_operators"],
     //   (options): any => {
+    //     switch (options.typesafe_equality_operators) {
+    //       case true:
+    //         return [2, "always"];
+    //       default:
+    //         return 0;
+    //     }
     //   }
     // ],
     // "no-else-return": [
