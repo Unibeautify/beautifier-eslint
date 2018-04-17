@@ -9,9 +9,9 @@ import * as readPkgUp from "read-pkg-up";
 import options from "./options";
 import { CLIEngine, Linter } from "eslint";
 import CLIOptions = CLIEngine.Options;
-import LintReport = CLIEngine.LintReport;
-import LintResult = CLIEngine.LintResult;
-import ParserOptions = Linter.ParserOptions;
+type LintReport = CLIEngine.LintReport;
+type LintResult = CLIEngine.LintResult;
+type ParserOptions = Linter.ParserOptions;
 const { pkg } = readPkgUp.sync({ cwd: __dirname });
 export const beautifier: Beautifier = {
   name: "ESLint",
