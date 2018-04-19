@@ -7,6 +7,11 @@ import {
 } from "unibeautify";
 import * as readPkgUp from "read-pkg-up";
 import options from "./options";
+import { CLIEngine, Linter } from "eslint";
+import CLIOptions = CLIEngine.Options;
+type LintReport = CLIEngine.LintReport;
+type LintResult = CLIEngine.LintResult;
+type ParserOptions = Linter.ParserOptions;
 const { pkg } = readPkgUp.sync({ cwd: __dirname });
 export const beautifier: Beautifier = {
   name: "ESLint",
@@ -21,19 +26,29 @@ export const beautifier: Beautifier = {
   options: {
     JavaScript: options.JavaScript,
   },
-  beautify({ text, options, dependencies }: BeautifierBeautifyData) {
+  beautify({
+    text,
+    options,
+    filePath,
+    projectPath,
+    dependencies,
+  }: BeautifierBeautifyData) {
     return new Promise<string>((resolve, reject) => {
       const { CLIEngine } = dependencies.get<NodeDependency>("ESLint").package;
-      const cli = new CLIEngine({
+      const parserOptions: ParserOptions = {
+        ecmaVersion: 6,
+      };
+      const cliOptions: CLIOptions = {
         fix: true,
-        parserOptions: {
-          ecmaVersion: 6,
-        },
+        parserOptions: parserOptions,
         rules: options,
-      });
-      const result = cli.executeOnText(text).results[0].output;
-      if (result) {
-        return resolve(result);
+        cwd: filePath || projectPath || "",
+      };
+      const cli: CLIEngine = new CLIEngine(cliOptions);
+      const report: LintReport = cli.executeOnText(text);
+      const result: LintResult = report.results[0];
+      if (result.output) {
+        return resolve(result.output);
       } else {
         return resolve(text);
       }
