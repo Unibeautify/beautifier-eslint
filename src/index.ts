@@ -12,6 +12,7 @@ import CLIOptions = CLIEngine.Options;
 type LintReport = CLIEngine.LintReport;
 type LintResult = CLIEngine.LintResult;
 type ParserOptions = Linter.ParserOptions;
+type Config = Linter.Config;
 const { pkg } = readPkgUp.sync({ cwd: __dirname });
 export const beautifier: Beautifier = {
   name: "ESLint",
@@ -26,23 +27,44 @@ export const beautifier: Beautifier = {
   options: {
     JavaScript: options.JavaScript,
   },
+  resolveConfig: ({ filePath, dependencies }) => {
+    if (!filePath) {
+      return Promise.resolve({});
+    }
+    const { CLIEngine } = dependencies.get<NodeDependency>("ESLint").package;
+    const cli: CLIEngine = new CLIEngine();
+    try {
+      return Promise.resolve({ config: cli.getConfigForFile(filePath) });
+    } catch (error) {
+      // tslint:disable-next-line:no-console
+      console.log(error);
+      return Promise.resolve({});
+    }
+  },
   beautify({
     text,
     options,
     filePath,
     projectPath,
     dependencies,
+    beautifierConfig,
   }: BeautifierBeautifyData) {
     return new Promise<string>((resolve, reject) => {
       const { CLIEngine } = dependencies.get<NodeDependency>("ESLint").package;
-      const parserOptions: ParserOptions = {
-        ecmaVersion: 6,
-      };
+      const config = (beautifierConfig && beautifierConfig.config) || {};
+      const { rules, parserOptions, env }: Config = config;
+      const parseOpts: ParserOptions =
+        parserOptions && Object.keys(parserOptions).length !== 0
+          ? parserOptions
+          : {
+              ecmaVersion: 6,
+            };
+      const finalOptions =
+        rules && Object.keys(rules).length !== 0 ? rules : options;
       const cliOptions: CLIOptions = {
         fix: true,
-        parserOptions: parserOptions,
-        rules: options,
-        cwd: filePath || projectPath || "",
+        parserOptions: parseOpts,
+        rules: finalOptions,
       };
       const cli: CLIEngine = new CLIEngine(cliOptions);
       const report: LintReport = cli.executeOnText(text);
