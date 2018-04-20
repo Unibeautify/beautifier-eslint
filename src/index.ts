@@ -51,20 +51,20 @@ export const beautifier: Beautifier = {
   }: BeautifierBeautifyData) {
     return new Promise<string>((resolve, reject) => {
       const { CLIEngine } = dependencies.get<NodeDependency>("ESLint").package;
-      const config = beautifierConfig && beautifierConfig.config  || {};
+      const config = (beautifierConfig && beautifierConfig.config) || {};
       const { rules, parserOptions, env }: Config = config;
       const parseOpts: ParserOptions =
         parserOptions && Object.keys(parserOptions).length !== 0
-        ? parserOptions
-        : { ecmaVersion: 6 };
+          ? parserOptions
+          : {
+              ecmaVersion: 6,
+            };
       const finalOptions =
-        rules && Object.keys(rules).length !== 0
-        ? rules
-        : options;
+        rules && Object.keys(rules).length !== 0 ? rules : options;
       const cliOptions: CLIOptions = {
         fix: true,
         parserOptions: parseOpts,
-        rules: finalOptions
+        rules: finalOptions,
       };
       const cli: CLIEngine = new CLIEngine(cliOptions);
       const report: LintReport = cli.executeOnText(text);
