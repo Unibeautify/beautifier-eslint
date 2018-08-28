@@ -23,6 +23,11 @@ export const beautifier: Beautifier = {
       name: "ESLint",
       package: "eslint",
     },
+    {
+      type: DependencyType.Node,
+      name: "ESLintPluginReact",
+      package: "eslint-plugin-react",
+    },
   ],
   options: {
     JavaScript: options.JavaScript,
@@ -51,6 +56,9 @@ export const beautifier: Beautifier = {
   }: BeautifierBeautifyData) {
     return new Promise<string>((resolve, reject) => {
       const { CLIEngine } = dependencies.get<NodeDependency>("ESLint").package;
+      const ESLintPluginReact = dependencies.get<NodeDependency>(
+        "ESLintPluginReact"
+      ).package;
       const config = (beautifierConfig && beautifierConfig.config) || {};
       const { rules, parserOptions, env }: Config = config;
       const parseOpts: ParserOptions =
@@ -67,6 +75,7 @@ export const beautifier: Beautifier = {
         rules: finalOptions,
       };
       const cli: CLIEngine = new CLIEngine(cliOptions);
+      cli.addPlugin("eslint-plugin-react", ESLintPluginReact);
       const report: LintReport = cli.executeOnText(text);
       const result: LintResult = report.results[0];
       if (result.output) {
