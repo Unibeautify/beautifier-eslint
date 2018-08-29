@@ -25,12 +25,13 @@ export const beautifier: Beautifier = {
     },
     {
       type: DependencyType.Node,
-      name: "ESLintPluginReact",
+      name: "ESLint-plugin-React",
       package: "eslint-plugin-react",
     },
   ],
   options: {
     JavaScript: options.JavaScript,
+    JSX: options.JavaScript,
   },
   resolveConfig: ({ filePath, dependencies }) => {
     if (!filePath) {
@@ -57,7 +58,7 @@ export const beautifier: Beautifier = {
     return new Promise<string>((resolve, reject) => {
       const { CLIEngine } = dependencies.get<NodeDependency>("ESLint").package;
       const ESLintPluginReact = dependencies.get<NodeDependency>(
-        "ESLintPluginReact"
+        "ESLint-plugin-React"
       ).package;
       const config = (beautifierConfig && beautifierConfig.config) || {};
       const { rules, parserOptions, env }: Config = config;
