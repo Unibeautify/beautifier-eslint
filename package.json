@@ -1,53 +1,55 @@
 {
-    "name": "@unibeautify/beautifier-eslint",
-    "version": "0.5.0",
-    "description": "ESLint beautifier for Unibeautify",
-    "main": "dist/src/index.js",
-    "typings": "dist/src/index.d.ts",
-    "scripts": {
-        "prepublishOnly": "npm run build",
-        "build": "npm run clean && npm run compile",
-        "clean": "rimraf dist",
-        "compile": "tsc",
-        "jest": "jest",
-        "test": "npm run build && npm run lint && npm run jest",
-        "lint": "tslint '{src,test}/**/*.ts'"
-    },
-    "repository": {
-        "type": "git",
-        "url": "git+https://github.com/Unibeautify/beautifier-eslint.git"
-    },
-    "keywords": [
-        "eslint", "unibeautify", "beautifier"
-    ],
-    "author": "Glavin Wiechert",
-    "license": "MIT",
-    "bugs": {
-        "url": "https://github.com/Unibeautify/beautifier-eslint/issues"
-    },
-    "homepage": "https://github.com/Unibeautify/beautifier-eslint#readme",
-    "peerDependencies": {
-        "unibeautify": ">= 0.12.1",
-        "eslint": "^4.19.1 || ^5.0.0",
-        "eslint-plugin-react": "^7.11.1"
-    },
-    "devDependencies": {
-        "@types/eslint": "4.16.3",
-        "@types/jest": "23.3.1",
-        "@types/node": "10.9.2",
-        "@types/read-pkg-up": "3.0.1",
-        "eslint": "^5.4.0",
-        "eslint-plugin-react": "^7.11.1",
-        "jest": "23.5.0",
-        "rimraf": "2.6.2",
-        "ts-jest": "23.1.4",
-        "tslint": "5.11.0",
-        "tslint-clean-code": "0.2.7",
-        "tslint-microsoft-contrib": "5.2.1",
-        "typescript": "3.0.1",
-        "unibeautify": "0.16.0"
-    },
-    "dependencies": {
-        "read-pkg-up": "^4.0.0"
-    }
+  "name": "@unibeautify/beautifier-eslint",
+  "version": "0.5.0",
+  "description": "ESLint beautifier for Unibeautify",
+  "main": "dist/src/index.js",
+  "typings": "dist/src/index.d.ts",
+  "scripts": {
+    "prepublishOnly": "npm run build",
+    "build": "npm run clean && npm run compile",
+    "clean": "rimraf dist",
+    "compile": "tsc",
+    "jest": "jest",
+    "test": "npm run build && npm run lint && npm run jest",
+    "lint": "tslint '{src,test}/**/*.ts'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Unibeautify/beautifier-eslint.git"
+  },
+  "keywords": [
+    "eslint",
+    "unibeautify",
+    "beautifier"
+  ],
+  "author": "Glavin Wiechert",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Unibeautify/beautifier-eslint/issues"
+  },
+  "homepage": "https://github.com/Unibeautify/beautifier-eslint#readme",
+  "peerDependencies": {
+    "unibeautify": ">= 0.12.1",
+    "eslint": "^4.19.1 || ^5.0.0",
+    "eslint-plugin-react": "^7.11.1",
+  },
+  "devDependencies": {
+    "@types/eslint": "4.16.3",
+    "@types/jest": "23.3.1",
+    "@types/node": "10.9.3",
+    "@types/read-pkg-up": "3.0.1",
+    "eslint": "^5.4.0",
+    "eslint-plugin-react": "^7.11.1",
+    "jest": "23.5.0",
+    "rimraf": "2.6.2",
+    "ts-jest": "23.1.4",
+    "tslint": "5.11.0",
+    "tslint-clean-code": "0.2.7",
+    "tslint-microsoft-contrib": "5.2.1",
+    "typescript": "3.0.1",
+    "unibeautify": "0.16.0"
+  },
+  "dependencies": {
+    "read-pkg-up": "^4.0.0"
+  }
 }
