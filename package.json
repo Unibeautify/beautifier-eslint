@@ -31,7 +31,7 @@
   "peerDependencies": {
     "unibeautify": ">= 0.12.1",
     "eslint": "^4.19.1 || ^5.0.0",
-    "eslint-plugin-react": "^7.11.1",
+    "eslint-plugin-react": "^7.11.1"
   },
   "devDependencies": {
     "@types/eslint": "4.16.3",

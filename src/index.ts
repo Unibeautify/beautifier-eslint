@@ -21,12 +21,13 @@ export const beautifier: Beautifier = {
     {
       type: DependencyType.Node,
       name: "ESLint",
-      package: "eslint",
+      package: "eslint"
     },
     {
       type: DependencyType.Node,
       name: "ESLint-plugin-React",
       package: "eslint-plugin-react",
+      optional: true
     },
   ],
   options: {
