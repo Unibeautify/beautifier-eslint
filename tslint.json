@@ -1,18 +1,14 @@
 {
     "rulesDirectory": [
-        "node_modules/tslint-clean-code/dist/src",
-        "node_modules/tslint-microsoft-contrib"
+        "node_modules/tslint-clean-code/dist/src", "node_modules/tslint-microsoft-contrib"
     ],
     "rules": {
         "class-name": true,
         "comment-format": [
-            true,
-            "check-space"
+            true, "check-space"
         ],
         "indent": [
-            true,
-            "spaces",
-            4
+            true, "spaces", 4
         ],
         "no-duplicate-variable": true,
         "no-eval": true,
@@ -21,20 +17,16 @@
         "no-unsafe-finally": true,
         "no-var-keyword": true,
         "quotemark": [
-            true,
-            "double"
+            true, "double"
         ],
         "semicolon": [
-            true,
-            "always"
+            true, "always"
         ],
         "triple-equals": [
-            true,
-            "allow-null-check"
+            true, "allow-null-check"
         ],
         "typedef-whitespace": [
-            true,
-            {
+            true, {
                 "call-signature": "nospace",
                 "index-signature": "nospace",
                 "parameter": "nospace",
@@ -43,8 +35,7 @@
             }
         ],
         "variable-name": [
-            true,
-            "ban-keywords"
+            true, "ban-keywords"
         ],
         "whitespace": [
             true,
@@ -54,45 +45,33 @@
             "check-separator",
             "check-type"
         ],
-        "object-literal-sort-keys": [true, "ignore-case"],
         "array-type": [
-            true,
-            "array"
+            true, "array"
         ],
         "arrow-return-shorthand": false,
         "await-promise": false,
         "adjacent-overload-signatures": false,
-        "align": [
-            false
-        ],
+        "align": [false],
         "arrow-parens": false,
         "ban": false,
         "callable-types": true,
         "chai-prefer-contains-to-index-of": true,
-        "completed-docs": [
-            false
-        ],
+        "completed-docs": [false],
         "curly": true,
-        "cyclomatic-complexity": [
-            false
-        ],
+        "cyclomatic-complexity": [false],
         "eofline": false,
         "export-name": false,
-        "file-header": [
-            false
-        ],
+        "file-header": [false],
         "forin": true,
         "function-name": [
-            true,
-            {
+            true, {
                 "static-method-regex": "^[a-z][\\w\\d]+$"
             }
         ],
         "id-length": [
             true,
             [
-                "_",
-                "T"
+                "_", "T"
             ]
         ],
         "import-blacklist": false,
@@ -105,34 +84,26 @@
         "jsdoc-format": false,
         "label-position": true,
         "linebreak-style": [
-            true,
-            "LF"
+            true, "LF"
         ],
         "max-classes-per-file": [
-            false
+            false, 1
         ],
-        "max-file-line-count": [
-            false
-        ],
+        "max-file-line-count": [false],
         "max-func-body-length": [
             true,
-            100,
-            {
+            100, {
                 "ignore-parameters-to-function-regex": "describe"
             }
         ],
         "max-line-length": [
-            true,
-            140
+            true, 140
         ],
         "max-func-args": [
-            true,
-            3
+            true, 3
         ],
         "member-access": true,
-        "member-ordering": [
-            false
-        ],
+        "member-ordering": [false],
         "missing-optional-annotation": true,
         "min-class-cohesion": false,
         "mocha-avoid-only": true,
@@ -147,9 +118,7 @@
         "no-bitwise": true,
         "no-boolean-literal-compare": false,
         "no-conditional-assignment": true,
-        "no-consecutive-blank-lines": [
-            true
-        ],
+        "no-consecutive-blank-lines": [true],
         "no-console": [
             true,
             "debug",
@@ -195,9 +164,7 @@
         "no-mergeable-namespace": false,
         "no-missing-visibility-modifiers": false,
         "no-misused-new": true,
-        "no-multiline-string": [
-            true
-        ],
+        "no-multiline-string": [true],
         "no-multiple-var-decl": true,
         "no-namespace": false,
         "no-null-keyword": false,
@@ -240,21 +207,13 @@
         "object-literal-shorthand": false,
         "object-literal-sort-keys": false,
         "one-line": [
-            true,
-            "check-open-brace",
-            "check-catch",
-            "check-else",
-            "check-whitespace"
+            true, "check-open-brace", "check-catch", "check-else", "check-whitespace"
         ],
         "one-variable-per-declaration": true,
         "only-arrow-functions": [
-            true,
-            "allow-declarations",
-            "allow-named-functions"
+            true, "allow-declarations", "allow-named-functions"
         ],
-        "ordered-imports": [
-            false
-        ],
+        "ordered-imports": [false],
         "possible-timing-attack": true,
         "prefer-array-literal": true,
         "prefer-const": true,
@@ -292,18 +251,14 @@
         "strict-boolean-expressions": false,
         "switch-default": false,
         "trailing-comma": [
-            true,
-            {
+            true, {
                 "singleline": "never",
-                "multiline": "ignore"
+                "multiline": "always"
             }
         ],
         "try-catch-first": true,
         "typedef": [
-            true,
-            "parameter",
-            "property-declaration",
-            "member-variable-declaration"
+            true, "parameter", "property-declaration", "member-variable-declaration"
         ],
         "unified-signatures": true,
         "use-isnan": true,
@@ -311,12 +266,8 @@
         "no-useless-files": true,
         "no-map-without-usage": true,
         "no-complex-conditionals": [
-            true,
-            2
+            true, 2
         ],
-        "prefer-dry-conditionals": [
-            true,
-            2
-        ]
+        "prefer-dry-conditionals": [true, 2]
     }
 }
