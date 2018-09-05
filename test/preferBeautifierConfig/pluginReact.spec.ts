@@ -32,8 +32,8 @@ var Test = createReactClass({
       options: {
         JSX: {
           ESLint: {
-            prefer_beautifier_config: true
-          }
+            prefer_beautifier_config: true,
+          },
         } as any,
       },
       text,
