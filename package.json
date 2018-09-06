@@ -30,14 +30,16 @@
   "homepage": "https://github.com/Unibeautify/beautifier-eslint#readme",
   "peerDependencies": {
     "unibeautify": ">= 0.12.1",
-    "eslint": "^4.19.1 || ^5.0.0"
+    "eslint": "^4.19.1 || ^5.0.0",
+    "eslint-plugin-react": "^7.11.1"
   },
   "devDependencies": {
     "@types/eslint": "4.16.3",
     "@types/jest": "23.3.1",
     "@types/node": "10.9.4",
     "@types/read-pkg-up": "3.0.1",
-    "eslint": "5.5.0",
+    "eslint": "^5.4.0",
+    "eslint-plugin-react": "^7.11.1",
     "jest": "23.5.0",
     "rimraf": "2.6.2",
     "ts-jest": "23.1.4",

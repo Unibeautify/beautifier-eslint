@@ -151,7 +151,7 @@ const options: BeautifierOptions = {
           default:
             return 0;
         }
-      }
+      },
     ],
     // "capitalized-comments": [
     //   [""],
@@ -169,7 +169,7 @@ const options: BeautifierOptions = {
           default:
             return 0;
         }
-      }
+      },
     ],
     "comma-style": [
       ["comma_first"],
@@ -182,7 +182,7 @@ const options: BeautifierOptions = {
           default:
             return 0;
         }
-      }
+      },
     ],
     // "computed-property-spacing": [
     //   [""],
@@ -200,7 +200,7 @@ const options: BeautifierOptions = {
           default:
             return 0;
         }
-      }
+      },
     ],
     // "func-call-spacing": [
     //   [""],
@@ -235,7 +235,7 @@ const options: BeautifierOptions = {
           default:
             return 0;
         }
-      }
+      },
     ],
     // "jsx-quotes": [
     //   [""],
@@ -257,7 +257,7 @@ const options: BeautifierOptions = {
         } else {
           return 0;
         }
-      }
+      },
     ],
     // "linebreak-style": [
     //   [""],
@@ -291,7 +291,7 @@ const options: BeautifierOptions = {
           return [2, {"ignoreChainWithDepth": 2 }];
         }
         return 0;
-      }
+      },
     ],
     // "no-lonely-if": [
     //   [""],
@@ -312,7 +312,7 @@ const options: BeautifierOptions = {
           default:
             return 0;
         }
-      }
+      },
     ],
     // "no-unneeded-ternary": [
     //   [""],
@@ -345,7 +345,7 @@ const options: BeautifierOptions = {
           default:
             return 0;
         }
-      }
+      },
     ],
     // "object-property-newline": [
     //   [""],
@@ -390,7 +390,7 @@ const options: BeautifierOptions = {
         } else {
           return [2, options.quotes];
         }
-      }
+      },
     ],
     "semi": [
       ["end_with_semicolon"],
@@ -403,7 +403,7 @@ const options: BeautifierOptions = {
           default:
             return 0;
         }
-      }
+      },
     ],
     // "semi-spacing": [
     //   [""],
@@ -436,7 +436,7 @@ const options: BeautifierOptions = {
           default:
             return 0;
         }
-      }
+      },
     ],
     "space-in-parens": [
       ["space_in_paren"],
@@ -449,7 +449,7 @@ const options: BeautifierOptions = {
           default:
             return 0;
         }
-      }
+      },
     ],
     // "space-infix-ops": [
     //   [""],
@@ -498,7 +498,7 @@ const options: BeautifierOptions = {
           return [2, options.arrow_parens];
         }
         return 0;
-      }
+      },
     ],
     // "arrow-spacing": [
     //   [""],
@@ -580,7 +580,7 @@ const options: BeautifierOptions = {
     //   (options): any => {
     //   }
     // ]
-  }
+  },
 };
 // unibeautify:enable
 export default options;

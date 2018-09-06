@@ -15,8 +15,8 @@ test(`should successfully beautify JavaScript text with indent_size=4 with space
       options: {
         JavaScript: {
           ESLint: {
-            prefer_beautifier_config: true
-          }
+            prefer_beautifier_config: true,
+          },
         } as any,
       },
       text,
@@ -36,8 +36,8 @@ test(`should not beautify because we are not passing in file path`, () => {
       options: {
         JavaScript: {
           ESLint: {
-            prefer_beautifier_config: true
-          }
+            prefer_beautifier_config: true,
+          },
         } as any,
       },
       text,
@@ -58,8 +58,8 @@ test(`should not beautify because file path does not find a config`, () => {
       options: {
         JavaScript: {
           ESLint: {
-            prefer_beautifier_config: true
-          }
+            prefer_beautifier_config: true,
+          },
         } as any,
       },
       text,

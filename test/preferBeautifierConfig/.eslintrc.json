@@ -1,0 +1,29 @@
+{
+    "parserOptions": {
+        "ecmaFeatures": {
+            "jsx": true
+        }
+    },
+    "globals": {
+        "createReactClass": true
+    },
+    "plugins": ["react"],
+    "extends": ["plugin:react/recommended"],
+    "rules": {
+        "react/jsx-wrap-multilines": [
+            "error", {
+                "declaration": "parens-new-line",
+                "assignment": "parens-new-line",
+                "return": "parens-new-line",
+                "arrow": "parens-new-line",
+                "condition": "parens-new-line",
+                "logical": "parens-new-line",
+                "prop": "parens-new-line"
+            }
+        ],
+        "indent": [
+            "error", 4
+        ],
+        "brace-style": ["error", "1tbs"]
+    }
+}
