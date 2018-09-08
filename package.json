@@ -35,7 +35,7 @@
   },
   "devDependencies": {
     "@types/eslint": "4.16.3",
-    "@types/jest": "23.3.1",
+    "@types/jest": "23.3.2",
     "@types/node": "10.9.4",
     "@types/read-pkg-up": "3.0.1",
     "eslint": "5.5.0",
