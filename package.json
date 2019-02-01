@@ -38,7 +38,7 @@
     "@types/jest": "23.3.13",
     "@types/node": "10.12.21",
     "@types/read-pkg-up": "3.0.1",
-    "eslint": "5.12.1",
+    "eslint": "5.13.0",
     "eslint-plugin-react": "7.12.4",
     "jest": "24.0.0",
     "rimraf": "2.6.3",
