@@ -3,8 +3,8 @@ env:
     - CC_TEST_REPORTER_ID=6e29e242a132576d8a09cd15dbbee62ffa903ebbe10ec73b4e689ba73481b6d9
 language: node_js
 node_js:
-  - "8"
-  - "10"
+  - "node"
+  - "lts/*"
 os:
   - linux
   - osx
