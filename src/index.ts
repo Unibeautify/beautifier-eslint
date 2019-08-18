@@ -25,7 +25,7 @@ export const beautifier: Beautifier = {
     },
     {
       type: DependencyType.Node,
-      name: "ESLint-plugin-React",
+      name: "react",
       package: "eslint-plugin-react",
       optional: true,
     },
@@ -58,11 +58,10 @@ export const beautifier: Beautifier = {
   }: BeautifierBeautifyData) {
     return new Promise<string>((resolve, reject) => {
       const { CLIEngine } = dependencies.get<NodeDependency>("ESLint").package;
-      const reactPlugin = dependencies.get<NodeDependency>(
-        "ESLint-plugin-React"
-      );
+      const reactPlugin = dependencies.get<NodeDependency>("react");
       const config = (beautifierConfig && beautifierConfig.config) || {};
-      const { rules, parserOptions, env }: Config = config;
+      const { rules, parserOptions, globals }: Config = config;
+      const { extends: extendsToAdd, plugins } = config;
       const parseOpts: ParserOptions =
         parserOptions && Object.keys(parserOptions).length !== 0
           ? parserOptions
@@ -71,15 +70,22 @@ export const beautifier: Beautifier = {
             };
       const finalOptions =
         rules && Object.keys(rules).length !== 0 ? rules : options;
+      const pluginsToLoad = reactPlugin.isInstalled ? plugins : null;
       const cliOptions: CLIOptions = {
+        baseConfig: {
+          extends: extendsToAdd,
+          globals: globals,
+        },
         fix: true,
         parserOptions: parseOpts,
+        plugins: pluginsToLoad,
         rules: finalOptions,
+        useEslintrc: false,
       };
       const cli: CLIEngine = new CLIEngine(cliOptions);
       // tslint:disable-next-line:promise-must-complete
       if (reactPlugin.isInstalled) {
-        cli.addPlugin("eslint-plugin-react", reactPlugin.package);
+        cli.addPlugin(reactPlugin.name, reactPlugin.package);
       }
       const report: LintReport = cli.executeOnText(text);
       const result: LintResult = report.results[0];
