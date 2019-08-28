@@ -37,7 +37,7 @@
     "@types/eslint": "6.1.1",
     "@types/jest": "24.0.18",
     "@types/node": "12.7.2",
-    "eslint": "6.2.2",
+    "eslint": "6.1.0",
     "eslint-plugin-react": "7.14.3",
     "jest": "24.9.0",
     "rimraf": "3.0.0",
@@ -45,7 +45,7 @@
     "tslint": "5.19.0",
     "tslint-clean-code": "0.2.9",
     "tslint-microsoft-contrib": "6.2.0",
-    "typescript": "3.5.3",
+    "typescript": "3.6.2",
     "unibeautify": "0.17.0"
   },
   "dependencies": {
