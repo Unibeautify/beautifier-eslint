@@ -1,6 +1,6 @@
-import { newUnibeautify, Beautifier } from "unibeautify";
-import beautifier from "../../src";
 import * as path from "path";
+import { newUnibeautify } from "unibeautify";
+import beautifier from "../../src";
 const filePath: string = path.resolve(__dirname, "test.js");
 test(`should successfully beautify JavaScript React with jsx-wrap-multilines`, () => {
   const unibeautify = newUnibeautify();
@@ -8,9 +8,11 @@ test(`should successfully beautify JavaScript React with jsx-wrap-multilines`, (
   const text = `
 var Test = createReactClass({
   render: function () {
-    return (<div>
-      <p>Hello</p>
-    </div>);
+    return (
+      <div>
+        <p>Hello</p>
+      </div>
+    );
   }
 });
   `;

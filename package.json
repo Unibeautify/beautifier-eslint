@@ -18,9 +18,7 @@
     "url": "git+https://github.com/Unibeautify/beautifier-eslint.git"
   },
   "keywords": [
-    "eslint",
-    "unibeautify",
-    "beautifier"
+    "eslint", "unibeautify", "beautifier"
   ],
   "author": "Glavin Wiechert",
   "license": "MIT",
@@ -31,7 +29,7 @@
   "peerDependencies": {
     "unibeautify": ">= 0.12.1",
     "eslint": "^4.19.1 || ^5.0.0 || ^6.0.0",
-    "eslint-plugin-react": "^7.11.1"
+    "eslint-plugin-react": "^7.14.3"
   },
   "devDependencies": {
     "@types/eslint": "6.1.1",
@@ -39,8 +37,8 @@
     "@types/node": "12.7.4",
     "eslint": "6.3.0",
     "eslint-plugin-react": "7.14.3",
-    "jest": "24.9.0",
     "rimraf": "3.0.0",
+    "jest": "24.9.0",
     "ts-jest": "24.0.2",
     "tslint": "5.19.0",
     "tslint-clean-code": "0.2.9",
