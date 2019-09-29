@@ -13,7 +13,7 @@ type LintReport = CLIEngine.LintReport;
 type LintResult = CLIEngine.LintResult;
 type ParserOptions = Linter.ParserOptions;
 type Config = Linter.Config;
-const pkg = readPkgUp.sync({ cwd: __dirname })!.package;
+const pkg = readPkgUp.sync({ cwd: __dirname })!.packageJson;
 export const beautifier: Beautifier = {
   name: "ESLint",
   package: pkg,
