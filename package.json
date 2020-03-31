@@ -34,7 +34,7 @@
     "eslint-plugin-react": "^7.11.1"
   },
   "devDependencies": {
-    "@types/eslint": "6.1.8",
+    "@types/eslint": "6.1.9",
     "@types/jest": "24.9.1",
     "@types/node": "12.12.31",
     "eslint": "6.8.0",
