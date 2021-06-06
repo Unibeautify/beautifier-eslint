@@ -39,7 +39,7 @@
     "@types/node": "12.12.31",
     "eslint": "6.8.0",
     "eslint-plugin-react": "7.20.3",
-    "jest": "24.9.0",
+    "jest": "25.0.0",
     "rimraf": "3.0.2",
     "ts-jest": "24.3.0",
     "tslint": "5.20.1",
